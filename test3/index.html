@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 100%
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 680px;
+    }
+
+    .phone {
+      position: relative;
+      width: 375px;
+      height: 667px;
+      border: 1px solid rgba(0, 0, 0, .7);
+    /*   margin: 0 auto; */
+      overflow: hidden;
+      border-radius: 30px;
+    }
+
+    .circle-29 {
+        width: 30px;
+        height: 30px;
+        background-color: rgba(0, 224, 93, .7);
+        position: absolute;
+        left: 236px;
+        top: 174px;
+        border-radius: 50%;
+        animation-name: circle29;
+        animation-duration: 3.5s; /* 42 * (1 / 12) */
+        animation-delay: 0.0833s; /* 1 * (1 / 12) */
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes circle29 {
+        0% {
+            transform: translate3d(0, 587.5px, 0);
+        }
+        61.90% { /* (2 * 12 + 3 - 1) / 42，注意要减去延时时间（1），因为 02:03 包含了它。下同。*/
+            transform: translate3d(0, 0, 0);
+        }
+        64.29% {
+            transform: translate3d(0, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, -612.5px, 0);
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <div class="circle-29"></div>
+  </div>
+</body>
+</html>

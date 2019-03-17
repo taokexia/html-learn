@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    figure {
+      width: 100px;
+      height: 100px;
+    }
+
+    .card-front {
+      background: red;
+    }
+
+    .card-back {
+      background: blue;
+      transform: rotateY(180deg);
+    }
+    /* 翻牌动作 */
+    .card.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-x {
+      background: green;
+      transform: rotateX(180deg);
+    }
+
+    .card-z {
+      background: yellow;
+      transform: rotateZ(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <figure class="card-front">1</figure>
+    <figure class="card-back">2y</figure>
+    <figure class="card-x">3x</figure>
+    <figure class="card-z">4z</figure>
+  </div>
+</body>
+</html>
